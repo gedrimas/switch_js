@@ -1,3 +1,4 @@
+// calss replaced with function
 function NamedOneFunction(firstName, lastName) {
   this.firstName = firstName;
   this.lastName = lastName;
