@@ -14,17 +14,11 @@ export abstract class Shape {
 
     constructor(points: Point[])
     constructor(points: Point[], color: string, filled: boolean)
-    constructor(points: Point[], color?: string, filled?: boolean){
+    constructor(points: Point[], color = 'green', filled = true){
         this.chekPoints(points)
-        if(color !== undefined && filled !== undefined){
-            this.points = points
-            this.color = color
-            this.filled = filled
-            return
-        }
         this.points = points
-        this.color = 'green'
-        this.filled = true
+        this.color = color
+        this.filled = filled
     } 
 
 

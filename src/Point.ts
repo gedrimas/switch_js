@@ -12,7 +12,7 @@ export class Point {
 
     constructor()
     constructor(x: Coordinates, y: Coordinates)
-    constructor(...points: Coordinates[] | undefined) {
+    constructor(...points: Coordinates[]) {
         if(points.length === 2){
          const [x, y] = points
             this.x = x
