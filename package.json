@@ -10,7 +10,8 @@
     "test:point": "jest test/Point.spec.ts",
     "test:shape": "jest test/Shape.spec.ts",
     "test:triangle": "jest test/Triangle.spec.ts",
-    "test": "jest"
+    "test": "jest",
+    "client": "tsc src/design_patterns/Client.ts & node src/design_patterns/Client.js"
   },
   "author": "",
   "license": "ISC",
