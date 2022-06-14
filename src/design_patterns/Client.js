@@ -1,7 +1,7 @@
 "use strict";
 exports.__esModule = true;
 var Shipment_1 = require("./Shipment");
-var mock_1 = require("./mock");
+var Gui_1 = require("./Gui");
 var Client = /** @class */ (function () {
     function Client(shipmentItem) {
         var shipmentId = shipmentItem.shipmentId, toAddress = shipmentItem.toAddress, fromAddress = shipmentItem.fromAddress, toZipCode = shipmentItem.toZipCode, fromZipCode = shipmentItem.fromZipCode, weight = shipmentItem.weight, marks = shipmentItem.marks;
@@ -21,6 +21,7 @@ var Client = /** @class */ (function () {
     };
     return Client;
 }());
-new Client(mock_1.mockItem).onShip(Shipment_1["default"]);
-new Client(mock_1.mockItem).onShip(Shipment_1["default"]);
-new Client(mock_1.mockItem).onShip(Shipment_1["default"]);
+var item = new Gui_1.Gui(150, '55555', '11111', 'Mockingbird Lane, Tulsa', '4th Ave SE, Bellevue, Wa 92021', undefined, ['Fragile', 'Do Not Leave', 'Return Receipt Requested']);
+new Client(item).onShip(Shipment_1.Shipment);
+new Client(item).onShip(Shipment_1.Shipment);
+new Client(item).onShip(Shipment_1.Shipment);

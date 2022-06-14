@@ -1,17 +1,7 @@
-import Shipment, {MarkedShipment} from './Shipment'
-import { mockItem } from './mock'
+import {Shipment, MarkedShipment, ShipmentItem} from './Shipment'
+import { Gui } from './Gui'
 
-export interface ShipmentItem {
-    shipmentId?: number
-    toAddress: string
-    fromAddress: string
-    toZipCode: string
-    fromZipCode: string
-    weight: number
-    marks?: string[] 
-}
-
-class Client implements ShipmentItem {
+class Client {
      shipmentId?: number
      toAddress: string
      fromAddress: string
@@ -20,7 +10,6 @@ class Client implements ShipmentItem {
      weight: number
      marks?: string[]
 
-    
     constructor(shipmentItem: ShipmentItem){
         const {
             shipmentId,
@@ -52,6 +41,17 @@ class Client implements ShipmentItem {
 }
 
 
-new Client(mockItem).onShip(Shipment)
-new Client(mockItem).onShip(Shipment)
-new Client(mockItem).onShip(Shipment)
+const item = new Gui(
+    150,
+    '55555',
+    '11111',
+    'Mockingbird Lane, Tulsa',
+    '4th Ave SE, Bellevue, Wa 92021',
+    undefined,
+    ['Fragile', 'Do Not Leave', 'Return Receipt Requested']
+    ) 
+
+
+new Client(item).onShip(Shipment)
+new Client(item).onShip(Shipment)
+new Client(item).onShip(Shipment)

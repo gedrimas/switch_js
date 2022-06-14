@@ -1,9 +1,7 @@
-import {AirEastShipper, ChicagoSprintShipper, PacificParcelShipper} from './Shipper'
-
 export interface IShipmentKinds {
-    getAirEastShipperRate: (w?: number) => number
-    getChicagoSprintShipperRate: (w?: number) => number
-    getPacificParcelShipperRate: (w?: number) => number
+    getAirEastShipperRate: (weight?: number) => number
+    getChicagoSprintShipperRate: (weight?: number) => number
+    getPacificParcelShipperRate: (weight?: number) => number
 }
 
 enum ShipmentKindsCompaniesRates {
@@ -72,7 +70,7 @@ export class Oversize implements IShipmentKinds{
     }
 }
 
-export default class ShipentKinds {
+export class ShipentKinds {
 
     weight: number
     

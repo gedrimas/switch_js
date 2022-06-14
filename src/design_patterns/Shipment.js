@@ -13,7 +13,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
-exports.MarkedShipment = exports.ShipmentDecorator = void 0;
+exports.MarkedShipment = exports.ShipmentDecorator = exports.Shipment = void 0;
 var Shipper_1 = require("./Shipper");
 var Shipment = /** @class */ (function () {
     function Shipment(item) {
@@ -48,7 +48,7 @@ var Shipment = /** @class */ (function () {
     Shipment.sId = 0;
     return Shipment;
 }());
-exports["default"] = Shipment;
+exports.Shipment = Shipment;
 var ShipmentDecorator = /** @class */ (function () {
     function ShipmentDecorator(shipmentItem) {
         this.wrappee = shipmentItem;

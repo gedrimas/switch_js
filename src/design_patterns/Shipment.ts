@@ -1,8 +1,17 @@
-import {ShipmentItem} from './Client'
 import Shipper from './Shipper'
 
+export interface ShipmentItem {
+    shipmentId?: number
+    toAddress: string
+    fromAddress: string
+    toZipCode: string
+    fromZipCode: string
+    weight: number
+    marks?: string[] 
+}
 
-export default class Shipment implements ShipmentItem {
+
+export class Shipment implements ShipmentItem {
 
     shipmentId?: number
     toAddress: string
@@ -111,8 +120,6 @@ export class ShipmentDecorator implements ShipmentItem{
 export class MarkedShipment extends ShipmentDecorator {
 
     private getMarks(): string {
-
-        ['Fragile', 'Do Not Leave', 'Return Receipt Requested']
 
         const shipmentMarks = {
             Fragile: '**MARK FRAGILE**',
